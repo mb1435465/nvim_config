@@ -1,0 +1,38 @@
+vim.opt.mouse = 'a'
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.cindent = true
+vim.opt.cinoptions = {
+    "g0",
+    "N-s",
+    "t0",
+    "(0",
+}
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.nu = true
+vim.opt.cursorline = true
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.showmode = true
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
+vim.opt.termguicolors = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = true,
+	underline = true,
+	update_in_insert = true,
+	severity_sort = true
+})
+vim.opt.backup = false
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
+vim.opt.updatetime = 50
+vim.g.zig_fmt_autosave = 1
