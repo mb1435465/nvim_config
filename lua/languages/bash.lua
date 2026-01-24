@@ -1,8 +1,8 @@
 vim.lsp.config("bashls", {
-    filetypes = {
-        ".bash",
-        ".sh",
-        ".zsh",
-        ".zshrc"
-    }
+	filetypes = {
+		"bash",
+		"sh",
+		"zsh",
+		"zshrc",
+	},
 })
