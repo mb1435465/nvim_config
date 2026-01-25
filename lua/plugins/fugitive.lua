@@ -5,8 +5,10 @@ return {
 		vim.keymap.set("n", "<leader>gD", vim.cmd.Gdiffsplit)
 		vim.keymap.set("n", "<leader>gC", function()
 			local branch = vim.fn.input("Branch name: ")
-			vim.cmd.Git("checkout -b " .. branch)
-			vim.cmd.Git("git push -u origin " .. branch)
+			if branch ~= "" then
+				vim.cmd.Git("checkout -b " .. branch)
+				vim.cmd.Git("git push -u origin " .. branch)
+			end
 		end)
 		vim.keymap.set("n", "<leader>gA", function()
 			vim.cmd.Git("add --all")
