@@ -11,6 +11,9 @@ return {
 			signcolumn = {
 				guibg = "none",
 			},
+			pmenu = {
+				guibg = "none",
+			},
 		}
 		vim.cmd.background = "dark"
 		vim.cmd.colorscheme("jellybeans")
