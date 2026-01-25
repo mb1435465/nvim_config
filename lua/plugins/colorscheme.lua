@@ -14,6 +14,9 @@ return {
 			pmenu = {
 				guibg = "none",
 			},
+			cursorlinenr = {
+				guifg = "f5830b",
+			},
 		}
 		vim.cmd.background = "dark"
 		vim.cmd.colorscheme("jellybeans")
