@@ -62,14 +62,10 @@ return {
 
 		vim.keymap.set("n", "<leader>gj", ":diffget //3<CR>")
 		vim.keymap.set("n", "<leader>gf", ":diffget //2<CR>")
-
-		vim.cmd([[
-            function! ConflictStats()
-                let l:conflict_pattern = "^<<<<<<< "
-                let l:conflicts = search(l:conflict_pattern, 'n')
-                echo "Remaining conflicts: " . l:conflicts
-            endfunction
-        ]])
-		vim.keymap.set("n", "<leader>go", ":call ConflictStats()<CR>")
+		vim.keymap.set("n", "<leader>go", function()
+			local conflict_pattern = "^<<<<<<< "
+			local conflicts = vim.fn.search(conflict_pattern, "n")
+			print("Remaining conflicts: " .. conflicts)
+		end)
 	end,
 }
