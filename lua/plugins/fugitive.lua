@@ -56,6 +56,19 @@ return {
 		vim.keymap.set("n", "<leader>gsc", function()
 			vim.cmd.Git("stash clear")
 		end)
+		vim.keymap.set("n", "<leader>gr", function()
+			local file = vim.fn.expand("%")
+			local confirm = vim.fn.input("Do you want to restore this file(yes/no): ")
+			if confirm == "yes" then
+				vim.cmd.Git("restore " .. file)
+			end
+		end)
+		vim.keymap.set("n", "<leader>gR", function()
+			local confirm = vim.fn.input("Do you want to restore ALL files (yes/no): ")
+			if confirm == "yes" then
+				vim.cmd.Git("restore .")
+			end
+		end)
 
 		vim.opt.diffopt:append("algorithm:patience")
 		vim.opt.diffopt:append("indent-heuristic")
