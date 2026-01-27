@@ -5,10 +5,10 @@ return {
 		require("toggleterm").setup({
 			size = 40,
 			direction = "float",
-			open_mapping = "<C-\\>",
+			open_mapping = [[<c-\]],
 			float_opts = {
 				border = "single",
-				title_pos = "left",
+				itle_pos = "left",
 			},
 		})
 		local Terminal = require("toggleterm.terminal").Terminal
