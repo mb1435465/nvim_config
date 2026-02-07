@@ -68,7 +68,7 @@ return {
 		vim.keymap.set("n", "<leader>gR", function()
 			local confirm = vim.fn.input("Do you want to restore ALL files (yes/no): ")
 			if confirm == "yes" then
-				vim.cmd.Git("restore .")
+				vim.cmd.Git("restore :/")
 			end
 		end)
 
